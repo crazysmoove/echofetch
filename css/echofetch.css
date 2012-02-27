@@ -1,0 +1,40 @@
+/* echofetch.css */
+
+body {
+    font-family: 'Droid Sans', sans-serif;
+}
+
+#song_results {
+    float: left;
+    border: 1px solid #999;
+    width: 33%;
+    height: 500px;
+    overflow: scroll;
+}
+
+#summary_results {
+    float: right;
+    border: 1px solid #999;
+    width: 66%;
+    height: 58px;
+    margin-bottom: 10px;
+    overflow-y: scroll;    
+}
+
+#track_analysis {
+    float: right;
+    border: 1px solid #999;
+    width: 66%;
+    height: 430px;
+    overflow: scroll;
+}
+
+.song_title {
+    color: #000;
+}
+
+.artist_name {
+    font-weight: bold;
+    font-size: 11px;
+    color: #555;
+}

@@ -1,0 +1,37 @@
+<!--
+    api key: XM60RFNS2GT8X6GV7 
+    sample search:
+    http://developer.echonest.com/api/v4/song/search?api_key=XM60RFNS2GT8X6GV7&format=json&results=100&artist=bomb+the+bass
+-->
+
+<html>
+
+<head>
+    <title>EchoFetch: EchoNest Track Analysis Fetcher</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/echofetch.css" />
+</head>
+
+<body>
+
+<form>
+    <label for="artist">Artist</label>
+    <input type="text" id="artist" name="artist" value="bomb the bass" />
+    <button type="submit"> &nbsp; Fetch &raquo; &nbsp; </button>
+</form>
+
+<div id="song_results">
+</div>
+
+<div id="summary_results">
+</div>
+
+<div id="track_analysis">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/echofetch.js"></script>
+
+</body>
+
+</html>
