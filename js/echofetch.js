@@ -82,13 +82,14 @@ function fetchAnalysis(songId) {
 function fetchTrackDetails() {
 
     var trackAnalysisUrl = $('#summary_results').text();
+    trackAnalysisUrl = trackAnalysisUrl.replace("https://", "http://");
     
     var analysisResultsDiv = $('#track_analysis');
     
     analysisResultsDiv.html('Loading... (this might take a minute)<br/><br/>' + trackAnalysisUrl);
     
     $.ajax(trackAnalysisUrl, {
-        timeout: 10000,
+        timeout: 30000,
         success: function(data) {
             alert(data);
         },
@@ -96,8 +97,13 @@ function fetchTrackDetails() {
             if (errorType == 'timeout') {
                 alert('request timed out');
             } else {
-                alert('non-timeout error: ' + errorType + '\n\n' + xhr.status + xhr.statusText);
+                alert('non-timeout error: ' + errorType + errorObj);                
             }
+        },
+        dataType: 'jsonp text',
+        jsonpCallback: 'callback',
+        dataFilter: function(data, dataType) {
+            return 'callback(' + data + ')';
         }
     });
     
